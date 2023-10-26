@@ -1,0 +1,17 @@
+{
+  "name": "03_cli_telegram_console_sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "init_env": "env $(cat .env | xargs) node app.js",
+    "sendMessage": "env $(cat .env | xargs) node app.js m 'test'",
+    "sendPhoto": "env $(cat .env | xargs) node app.js p './images/form.png'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "node-telegram-bot-api": "^0.63.0"
+  }
+}
