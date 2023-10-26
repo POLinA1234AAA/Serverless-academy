@@ -1,5 +1,5 @@
 
-# CLI Telegram Bot Sender
+#  Telegram Bot Sender
 
 CLI Telegram Bot Sender is a command-line tool that allows you to easily send messages and photos to your Telegram bot.
 
