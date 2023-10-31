@@ -1,6 +1,6 @@
 
-const BOT_TOKEN = '6487538686:AAFS7pgCs12HJD1aqAwfFn9d7Vl7pzlQ-Hk'; // Replace with your Telegram bot token
-const OPENWEATHER_API_KEY = '277794d104341f1a983c41d901b6d04f'; // Replace with your OpenWeather API key
+const BOT_TOKEN = ''; // Replace with Telegram bot token
+const OPENWEATHER_API_KEY = ''; // Replace with  OpenWeather API key
 
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
@@ -89,10 +89,10 @@ function handleConversation(chatId, text) {
 
 
 function getWeatherForecast(chatId, city, intervalHours) {
-    // Calculate the number of forecasts needed for the next 24 hours based on the interval
+  
     const numberOfForecasts = Math.ceil(24 / intervalHours);
 
-    // OpenWeather API request for the city's weather forecast
+
     axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${OPENWEATHER_API_KEY}`)
         .then((response) => {
             const forecasts = response.data.list;
@@ -114,8 +114,8 @@ function getWeatherForecast(chatId, city, intervalHours) {
                 message += `${dateString} ${timeString}: ${description}, Temperature: ${temperature}°C\n`;
             }
 
-            // Send the weather forecast message
-            bot.sendMessage(chatId, message, initialOptions); // Include "initialOptions" to send "Options" buttons
+       
+            bot.sendMessage(chatId, message, initialOptions); 
 
             // Remove the conversation state
             delete conversationState[chatId];
