@@ -1,0 +1,16 @@
+{
+  "name": "04_weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "axios": "^0.21.1",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
